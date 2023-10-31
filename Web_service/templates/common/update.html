@@ -113,14 +113,6 @@
       <div class="sign-up-htm">
       <form action="{% url "common:changepassword" %}" method="post">
         {% csrf_token %}
-        {% if messages %}
-        <div>
-            {% for message in messages %}
-                {{ message.tags }}! {{ message.message }}
-            {% endfor %}
-        </div>
-        {% endif %}
-        {% include "form_errors.html" %}
 
         <div class="group">
           <label for="id_old_password"" class="label">기존 비밀번호</label>
